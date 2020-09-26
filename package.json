@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node  backend/server.js",
+    "debug": "babel-node debug server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabarsaleem/amazona.git"
+  },
+  "author": "Jabar Saleem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jabarsaleem/amazona/issues"
+  },
+  "homepage": "https://github.com/jabarsaleem/amazona#readme"
+}
