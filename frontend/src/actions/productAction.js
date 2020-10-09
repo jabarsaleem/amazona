@@ -33,4 +33,7 @@ const detatilsProduct = (productId) => async(dispatch) => {
     dispatch({type:PRODUCT_DETAILS_ERROR,payload:console.error.message})
   }
 };
+
+
+
 export { listProducts,detatilsProduct };

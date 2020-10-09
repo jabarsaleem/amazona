@@ -1,6 +1,7 @@
 import React, { Component } from "react";
  
 import{BrowserRouter,Route,Link} from 'react-router-dom';
+import CartScreen from "./Screens/CartScreen";
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
 
@@ -44,6 +45,7 @@ class App extends Component {
           <div className="content">
             <Route path="/" exact={true} component={HomeScreen}/>
             <Route path="/product/:id" component={ProductScreen}/>
+            <Route path="/cart/:id?" component={CartScreen}/>
 
             
           </div>

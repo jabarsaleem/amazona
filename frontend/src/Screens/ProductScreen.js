@@ -15,6 +15,11 @@ function ProductScreen(props) {
     return () => {};
   }, []);
 
+  const addtocart=()=>{
+
+    props.history.push('/cart/'+ props.match.params.id +'?qty=' + qty)
+  }
+
   return (
     <div className="productmain">
       <div>
@@ -54,7 +59,7 @@ function ProductScreen(props) {
           <div className="details-action">
             <ul>
               <li>Price:{products.price}</li>
-              <li>Status:{products.status}</li>
+              <li>Status:{products.instock>0? "In Stock":"Out of Stock"}</li>
               <li>
                 Qty:
                 <select value={qty} onChange={(e)=>{setQty(e.target.value)}}>
@@ -67,22 +72,14 @@ function ProductScreen(props) {
                  )}
                 </select>
               </li>
+             
               <li>
-                Size:
-                <select value={Psiz} onChange={(e)=>{setPsize(e.target.value)}}>
-                  
-{/* 
-  work from here
-*/}
-                    <option value>
-            
-                    </option>
-                </select>
+                {products.instock>0 &&
+                <button className="btn-cart" onClick={addtocart}> Add to Cart</button>
+                
+                }
               </li>
-              <li>
-                <button className="btn-cart"> Add to Cart</button>
-              </li>
-            </ul>
+            </ul> 
           </div>
         </div>
       }
